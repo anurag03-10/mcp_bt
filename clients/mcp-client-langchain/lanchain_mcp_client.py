@@ -64,7 +64,7 @@ class CustomEncoder(json.JSONEncoder):
 # ---------------------------
 # Create an instance of the Google Gemini LLM.
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash-001",     # Gemini model to use
+    model="gemini-2.5-flash-lite",     # Gemini model to use
     temperature=0,              # 0 = deterministic output; increase for more creativity
     max_retries=2,              # Automatically retry API calls up to 2 times for transient errors
     google_api_key=os.getenv("GOOGLE_API_KEY")  # Google API key must be set in your environment or .env file
