@@ -1,0 +1,1 @@
+ I made my first MCP client and connected with MCP Server <3
