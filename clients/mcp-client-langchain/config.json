@@ -1,0 +1,28 @@
+{
+
+    "mcpServers": {
+        "terminal_server": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "--init",
+                "-e",
+                "DOCKER_CONTAINER=true",
+                "-v",
+                "/Users/anuragsingh/Krish Naik GenAI/mcp_bt/workspace:/root/mcp/workspace",
+                "terminal_server_doccker"
+            ]
+        },
+        "fetch": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "mcp_fetch_server_test"
+            ]
+        }
+    }
+}

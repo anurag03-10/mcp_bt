@@ -4,7 +4,12 @@ from mcp.server.fastmcp import FastMCP
 
 
 mcp = FastMCP("terminal")
-DEFAULT_WORKSPACE = os.path.expanduser("/Users/anuragsingh/Krish Naik GenAI/mcp_bt/workspace")
+
+# Determine the workspace path based on whether running in Docker
+if os.getenv("DOCKER_CONTAINER") == "true":
+    DEFAULT_WORKSPACE = "/root/mcp/workspace"
+else:
+    DEFAULT_WORKSPACE = os.path.expanduser("/Users/anuragsingh/Krish Naik GenAI/mcp_bt/workspace")
 
 
 
